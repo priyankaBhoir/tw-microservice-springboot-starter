@@ -14,7 +14,7 @@ import static csmart.db.gen.tables.Users.USERS;
  */
 @Repository
 @Transactional
-public class UserRepo {
+public class OldUserRepo {
 
     @Autowired
     private DSLContext dsl;

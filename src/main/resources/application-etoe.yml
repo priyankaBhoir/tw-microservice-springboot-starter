@@ -3,6 +3,6 @@ spring:
   profiles: etoe
 
   datasource:
-    url: jdbc:postgresql://localhost:8765/csmartetoe
+    url: jdbc:postgresql://localhost:5432/csmartetoe
     username: csmartuser
     password: csmartuser

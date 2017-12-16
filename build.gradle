@@ -34,7 +34,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-jooq')
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.postgresql:postgresql:9.4.1211.jre7')
+	compile('org.postgresql:postgresql')
 	compile('org.flywaydb:flyway-core:4.0.3')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
@@ -43,7 +43,7 @@ jooq {
 	csmart(sourceSets.main) {
 		jdbc {
 			driver = 'org.postgresql.Driver'
-			url = 'jdbc:postgresql://localhost:7654/csmartci'
+			url = 'jdbc:postgresql://localhost:5432/csmartci'
 			user = 'csmartuser'
 			password = 'csmartuser'
 			schema = 'public'
@@ -85,7 +85,7 @@ jooq {
 }
 
 flyway {
-	url = 'jdbc:postgresql://localhost:7654/csmartci'
+	url = 'jdbc:postgresql://localhost:5432/csmartci'
 	user = 'csmartuser'
 	password = 'csmartuser'
 	schemas = ['public']
@@ -94,3 +94,7 @@ flyway {
 
 generateCsmartJooqSchemaSource.dependsOn flywayMigrate
 test.dependsOn flywayClean
+
+bootRun {
+	systemProperties = System.properties
+}

@@ -2,7 +2,6 @@ package csmart.api.db;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 /**
  * Created by sethur on 2/10/2016.
  */

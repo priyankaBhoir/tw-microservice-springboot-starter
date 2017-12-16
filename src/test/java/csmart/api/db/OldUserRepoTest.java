@@ -17,10 +17,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest()
 @ActiveProfiles("ci")
 
-public class UserRepoTest {
+public class OldUserRepoTest {
 
     @Autowired
-    private UserRepo userRepo;
+    private OldUserRepo userRepo;
 
     @Test
     public void shouldInsertUserInDb(){

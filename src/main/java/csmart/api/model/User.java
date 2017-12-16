@@ -16,7 +16,7 @@ public class User {
     public User(UsersRecord user) {
         this.emailid = user.getEmailid();
         this.password = user.getPasswordHash();
-        this.address = JsonType.fromJsonNode(user.getAddress(), Address.class);
+//        this.address = JsonType.fromJsonNode(user.getAddress(), Address.class);
         this.practiceName = user.getPracticeName();
         this.primaryUser = user.getPrimaryUser();
     }
